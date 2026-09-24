@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UTO EVENT — Bangkok 2026 | Style 09 THAITICKETMAJOR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Archivo:wght@500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#d31145;
+  --red-deep:#a90d38;
+  --ink:#333;
+  --sub:#777;
+  --line:#e8e8e8;
+  --paper:#fff;
+  --wash:#f7f7f7;
+  --dark:#1a1a1c;
+  --sans:'Archivo','Prompt','Noto Sans Thai',sans-serif;
+  --th:'Prompt','Noto Sans Thai','Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--th);font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ---------- top red strip ---------- */
+.strip{background:var(--red);color:#fff;font-size:12.5px;padding:8px 0}
+.strip-in{max-width:1240px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+.strip b{font-weight:700}
+.strip .lnk{text-decoration:underline;cursor:pointer;opacity:.92}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:3px solid var(--red);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.nav-in{max-width:1240px;margin:0 auto;padding:0 40px;height:70px;display:flex;align-items:center;gap:30px}
+.logo{height:32px}
+.nav-links{display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav-links a{padding:6px 0;transition:.2s;position:relative}
+.nav-links a:hover{color:var(--red)}
+.nav-links a:hover::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--red)}
+.nav-right{display:flex;align-items:center;gap:14px;margin-left:auto}
+.badge18{font-family:var(--sans);font-size:9px;font-weight:800;color:#fff;background:var(--red);border-radius:3px;padding:4px 7px;letter-spacing:.06em}
+.langs{display:flex;gap:1px;font-family:var(--sans);font-size:11px;font-weight:700}
+.langs button{border:1px solid var(--line);background:#fff;color:var(--sub);padding:5px 9px;cursor:pointer;transition:.2s}
+.langs button:first-child{border-radius:4px 0 0 4px}
+.langs button:last-child{border-radius:0 4px 4px 0}
+.langs button.on{background:var(--red);border-color:var(--red);color:#fff}
+.btn-auth{font-family:var(--th);font-size:13.5px;font-weight:600;background:var(--red);color:#fff;border:none;border-radius:20px;padding:9px 22px;cursor:pointer;transition:.2s}
+.btn-auth:hover{background:var(--red-deep)}
+.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer;transition:.2s;color:var(--ink)}
+.icon-btn:hover{border-color:var(--red);color:var(--red)}
+.icon-btn svg{width:17px;height:17px}
+
+/* ---------- hero zone ---------- */
+.hero-zone{background:var(--dark);padding:22px 0 26px}
+.hero-in{max-width:1240px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 300px;gap:18px}
+.hero-main{position:relative;border-radius:8px;overflow:hidden;min-height:430px}
+.hero-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 16%}
+.hero-main::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,26,28,.72) 0%,transparent 55%,rgba(26,26,28,.4) 100%)}
+.hero-cap{position:absolute;z-index:3;left:44px;top:50%;transform:translateY(-50%);color:#fff;max-width:520px}
+.hero-cap .pre{display:inline-flex;align-items:center;gap:8px;background:var(--red);font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:6px 14px;border-radius:4px;margin-bottom:16px}
+.hero-cap h1{font-family:var(--sans);font-size:clamp(30px,3.8vw,50px);font-weight:800;letter-spacing:.02em;line-height:1.08;text-transform:uppercase;text-shadow:0 3px 20px rgba(0,0,0,.5)}
+.hero-cap .meta{margin-top:16px;font-size:15px;opacity:.95;display:flex;gap:20px;flex-wrap:wrap}
+.hero-cap .meta span{display:flex;align-items:center;gap:8px}
+.hero-cap .meta svg{width:15px;height:15px;stroke:var(--red);flex:none}
+.hero-cap .row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn-red{font-family:var(--th);font-size:15px;font-weight:700;background:var(--red);color:#fff;border:none;border-radius:6px;padding:15px 36px;cursor:pointer;transition:.2s;box-shadow:0 8px 24px rgba(211,17,69,.4)}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px)}
+.btn-ow{font-family:var(--th);font-size:14px;font-weight:500;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.65);color:#fff;border-radius:6px;padding:15px 28px;cursor:pointer;transition:.2s}
+.btn-ow:hover{background:rgba(255,255,255,.24)}
+.hero-side{display:flex;flex-direction:column;gap:14px}
+.side-card{flex:1;background:#232326;border-radius:8px;padding:20px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.08);transition:.25s;cursor:pointer}
+.side-card:hover{background:#2c2c30;border-color:var(--red)}
+.side-card .t{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:9px}
+.side-card .t .ic{color:var(--red);font-size:17px}
+.side-card p{font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.7}
+.hero-dots{position:absolute;bottom:16px;left:0;right:0;display:flex;gap:7px;justify-content:center;z-index:3}
+.hero-dots i{width:26px;height:4px;border-radius:3px;background:rgba(255,255,255,.35)}
+.hero-dots i.on{background:var(--red)}
+
+/* ---------- tabs ---------- */
+.tabs-wrap{border-bottom:1px solid var(--line);background:#fff}
+.tabs{max-width:1240px;margin:0 auto;padding:0 40px;display:flex;gap:34px}
+.tab{padding:18px 2px;font-size:16.5px;font-weight:600;color:var(--sub);cursor:pointer;position:relative;transition:.2s;display:flex;align-items:center;gap:9px}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink)}
+.tab.on::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3.5px;background:var(--red)}
+.tab .flame{color:var(--red);font-size:15px}
+.tab .new{font-family:var(--sans);font-size:9px;font-weight:800;background:var(--red);color:#fff;border-radius:3px;padding:2.5px 6px}
+
+/* ---------- sections ---------- */
+section{padding:38px 0 20px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.sec-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.sec-row h2{font-size:21px;font-weight:700;display:flex;align-items:center;gap:10px}
+.sec-row h2::before{content:'';width:5px;height:22px;background:var(--red);border-radius:3px}
+.sec-row .more{color:var(--sub);font-size:13.5px;cursor:pointer;transition:.2s}
+.sec-row .more:hover{color:var(--red)}
+
+/* show grid */
+.show-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.show{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;transition:.22s;cursor:pointer}
+.show:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.13);border-color:#dcdcdc}
+.show .ph{aspect-ratio:3/3.9;overflow:hidden;position:relative;background:var(--wash)}
+.show .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:.5s}
+.show:hover .ph img{transform:scale(1.05)}
+.show .badge{position:absolute;top:10px;left:10px;font-size:10.5px;font-weight:700;color:#fff;background:var(--red);border-radius:4px;padding:3.5px 9px}
+.show .badge.gray{background:#7c7c80}
+.show .body{padding:12px 13px 14px}
+.show h3{font-size:13.8px;font-weight:600;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:41px}
+.show .dt{color:var(--sub);font-size:12px;margin-top:6px}
+.show .btn-s{margin-top:10px;width:100%;font-family:var(--th);font-size:12.5px;font-weight:700;color:var(--red);background:#fff;border:1.5px solid var(--red);border-radius:5px;padding:8px;cursor:pointer;transition:.18s}
+.show .btn-s:hover{background:var(--red);color:#fff}
+.show .btn-s.solid{background:var(--red);color:#fff}
+.show .btn-s.solid:hover{background:var(--red-deep)}
+
+/* feature banner */
+.feat{margin-top:26px;border-radius:10px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;background:var(--dark);color:#fff;min-height:280px}
+.feat .ph{position:relative;overflow:hidden}
+.feat .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.feat .body{padding:44px 46px;display:flex;flex-direction:column;justify-content:center}
+.feat .body .pre{color:var(--red);font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px}
+.feat .body h3{font-family:var(--sans);font-size:clamp(22px,2.4vw,30px);font-weight:800;text-transform:uppercase;line-height:1.2}
+.feat .body p{color:rgba(255,255,255,.65);font-size:14px;margin-top:12px;line-height:1.9}
+.feat .body .btn-f{margin-top:24px;align-self:flex-start;font-family:var(--th);font-size:14px;font-weight:700;background:var(--red);color:#fff;border:none;border-radius:6px;padding:13px 30px;cursor:pointer;transition:.2s}
+.feat .body .btn-f:hover{background:var(--red-deep)}
+
+/* info strip */
+.info-strip{margin:34px 0 10px;background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:26px 34px;display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.info{display:flex;gap:12px;align-items:center}
+.info .ic{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:19px;color:var(--red)}
+.info .t{font-size:14px;font-weight:700}
+.info p{color:var(--sub);font-size:12.5px;margin-top:2px}
+
+/* footer */
+footer{background:var(--dark);color:#fff;margin-top:44px}
+.f-topline{background:var(--red)}
+.f-topline .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;gap:12px}
+.f-topline .t{font-size:15px;font-weight:700}
+.f-topline .btn-w{background:#fff;color:var(--red);font-family:var(--th);font-size:13px;font-weight:700;border:none;border-radius:20px;padding:9px 22px;cursor:pointer;transition:.2s}
+.f-topline .btn-w:hover{transform:translateY(-1px)}
+.f-grid{max-width:1240px;margin:0 auto;padding:44px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px}
+.f-brand img{height:32px;margin-bottom:18px}
+.f-brand p{color:rgba(255,255,255,.55);font-size:12.5px;line-height:2;max-width:300px}
+.f-col .t{font-size:13px;font-weight:700;margin-bottom:14px}
+.f-col a,.f-col span{display:block;color:rgba(255,255,255,.58);font-size:12.5px;line-height:2.3;transition:.2s}
+.f-col a:hover{color:#fff}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12)}
+.f-bottom .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px;font-size:11.5px;color:rgba(255,255,255,.5);flex-wrap:wrap;gap:10px}
+.f-bottom .b18{border:1px solid rgba(255,255,255,.35);border-radius:3px;padding:3px 9px;font-weight:700;color:rgba(255,255,255,.7)}
+
+.toast{position:fixed;left:50%;bottom:40px;transform:translate(-50%,20px);background:var(--dark);color:#fff;padding:13px 24px;font-size:13.5px;border-radius:6px;opacity:0;pointer-events:none;transition:.4s;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* responsive */
+@media (max-width:1080px){
+  .show-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-in{grid-template-columns:1fr}
+  .hero-side{flex-direction:row}
+  .side-card{padding:16px}
+  .f-grid{grid-template-columns:1fr 1fr 1fr}
+}
+@media (max-width:860px){
+  .nav-links{display:none}
+  .nav-in,.wrap,.tabs,.hero-in,.f-grid{padding-left:20px;padding-right:20px}
+  .hero-cap{left:24px;max-width:85%}
+  .feat{grid-template-columns:1fr}
+  .feat .ph{min-height:220px}
+  .tabs{overflow-x:auto}
+  .show-grid{grid-template-columns:1fr 1fr}
+  .info-strip{gap:18px}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:390px){
+  .show-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .hero-side{flex-direction:column}
+  .f-grid{grid-template-columns:1fr}
+  .f-bottom .wrap{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<a href="index.html" style="position:fixed;left:14px;bottom:14px;z-index:90;background:rgba(20,20,24,.88);color:#fff;text-decoration:none;font-family:var(--th),sans-serif;font-size:12.5px;font-weight:500;padding:10px 16px;border-radius:22px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);box-shadow:0 6px 18px rgba(0,0,0,.28);transition:.25s" onmouseover="this.style.background='#E11D48'" onmouseout="this.style.background='rgba(20,20,24,.88)'">← หน้ารวม 9 แบบ</a>
+
+
+<div class="strip">
+  <div class="strip-in">
+    <span><b data-th="UTO Bangkok 2026" data-en="UTO Bangkok 2026">UTO Bangkok 2026</b> — <span data-th="16—17 พ.ค. 2026" data-en="May 16–17, 2026">16—17 พ.ค. 2026</span></span>
+    <span class="lnk" onclick="location.hash='#'" data-th="เปิดขายบัตรเร็ว ๆ นี้ — กดเพื่อรับข่าวก่อนใคร" data-en="Tickets on sale soon — click to get news first">เปิดขายบัตรเร็ว ๆ นี้ — กดเพื่อรับข่าวก่อนใคร</span>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#"><img src="assets/img/logo-uto-pink.png" alt="UTO EVENT" class="logo"></a>
+    <div class="nav-links">
+      <a href="#" data-th="หน้าแรก" data-en="Home">หน้าแรก</a>
+      <a href="#shows" data-th="งานแสดง" data-en="Events">งานแสดง</a>
+      <a href="#shows" data-th="ศิลปิน" data-en="Artists">ศิลปิน</a>
+      <a href="#" data-th="ข่าวสาร" data-en="News">ข่าวสาร</a>
+      <a href="#contact" data-th="ช่วยเหลือ" data-en="Help">ช่วยเหลือ</a>
+    </div>
+    <div class="nav-right">
+      <span class="badge18">18+</span>
+      <div class="langs">
+        <button class="on" onclick="setLang('th',this)">TH</button>
+        <button onclick="setLang('en',this)">EN</button>
+        <button onclick="jpToast()">JP</button>
+      </div>
+      <button class="btn-auth" onclick="location.hash='#'" data-th="เข้าสู่ระบบ" data-en="Login">เข้าสู่ระบบ</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-zone">
+  <div class="hero-in">
+    <div class="hero-main">
+      <img src="assets/img/seto-kanna-hero.webp" alt="UTO Bangkok 2026">
+      <div class="hero-cap">
+        <span class="pre" data-th="งานใหญ่ประจำปี" data-en="ANNUAL MEGA EVENT">งานใหญ่ประจำปี</span>
+        <h1>UTO Bangkok 2026</h1>
+        <div class="meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span data-th="16 — 17 พฤษภาคม 2026" data-en="May 16 — 17, 2026">16 — 17 พฤษภาคม 2026</span></span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Avani Sukhumvit <span data-th="ชั้น 7" data-en="7th Fl.">ชั้น 7</span></span>
+        </div>
+        <div class="row">
+          <button class="btn-red" onclick="location.hash='#'" data-th="ซื้อบัตร" data-en="Buy Tickets">ซื้อบัตร</button>
+          <button class="btn-ow" onclick="location.hash='#'" data-th="ดูรายละเอียดงาน" data-en="Event Details">ดูรายละเอียดงาน</button>
+        </div>
+      </div>
+      <div class="hero-dots"><i class="on"></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="hero-side">
+      <div class="side-card" onclick="location.hash='#'">
+        <div class="t"><span class="ic">🎟️</span><span data-th="โซนบัตรและสิทธิ์" data-en="Tickets &amp; Privileges">โซนบัตรและสิทธิ์</span></div>
+        <p data-th="เทียบสิทธิ์ VVIP / VIP / General แบบเห็นภาพ" data-en="Compare VVIP / VIP / General privileges visually.">เทียบสิทธิ์ VVIP / VIP / General แบบเห็นภาพ</p>
+      </div>
+      <div class="side-card" onclick="location.hash='#'">
+        <div class="t"><span class="ic">💬</span><span data-th="ติดต่อ LINE OA" data-en="LINE OA Support">ติดต่อ LINE OA</span></div>
+        <p data-th="ทีมงานตอบไวทุกวัน 09:00–21:00" data-en="Fast replies daily 9:00–21:00.">ทีมงานตอบไวทุกวัน 09:00–21:00</p>
+      </div>
+      <div class="side-card" onclick="location.hash='#'">
+        <div class="t"><span class="ic">🔔</span><span data-th="รับข่าวก่อนใคร" data-en="Get News First">รับข่าวก่อนใคร</span></div>
+        <p data-th="ลงทะเบียนรับแจ้งเตือนตอนเปิดขาย" data-en="Register for on-sale alerts.">ลงทะเบียนรับแจ้งเตือนตอนเปิดขาย</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs-wrap" id="shows">
+  <div class="tabs">
+    <div class="tab on"><span class="flame">🔥</span><span data-th="งานแสดงของ UTO" data-en="UTO Events">งานแสดงของ UTO</span></div>
+    <div class="tab" onclick="jpToast()"><span data-th="ทั้งหมด" data-en="All">ทั้งหมด</span></div>
+    <div class="tab" onclick="jpToast()"><span data-th="อีเวนต์เดี่ยว" data-en="Solo Events">อีเวนต์เดี่ยว</span></div>
+    <div class="tab" onclick="jpToast()">GOODS <span class="new">NEW</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-row">
+      <h2 data-th="งานแสดงที่เปิดขายและกำลังจะมา" data-en="On Sale &amp; Upcoming Shows">งานแสดงที่เปิดขายและกำลังจะมา</h2>
+      <span class="more" data-th="ดูทั้งหมด ›" data-en="View all ›">ดูทั้งหมด ›</span>
+    </div>
+    <div class="show-grid">
+      <div class="show">
+        <div class="ph"><img src="assets/img/seto-kanna-card.webp" alt="UTO Bangkok 2026"><span class="badge" data-th="งานใหญ่" data-en="MEGA">งานใหญ่</span></div>
+        <div class="body"><h3>UTO Bangkok 2026 — มหกรรมพบตัวจริง 14 ดาราญี่ปุ่น</h3><div class="dt" data-th="16 — 17 พ.ค. 2026" data-en="May 16 — 17, 2026">16 — 17 พ.ค. 2026</div><button class="btn-s solid" onclick="location.hash='#'" data-th="ซื้อบัตร" data-en="Buy">ซื้อบัตร</button></div>
+      </div>
+      <div class="show">
+        <div class="ph"><img src="assets/img/kamiki-rei-card.webp" alt="Kamiki Rei"><span class="badge gray" data-th="เร็ว ๆ นี้" data-en="SOON">เร็ว ๆ นี้</span></div>
+        <div class="body"><h3 data-th="Kamiki Rei Fan Meeting in Bangkok" data-en="Kamiki Rei Fan Meeting in Bangkok">Kamiki Rei Fan Meeting in Bangkok</h3><div class="dt" data-th="10 — 11 ต.ค. 2026" data-en="Oct 10 — 11, 2026">10 — 11 ต.ค. 2026</div><button class="btn-s" onclick="location.hash='#'" data-th="รับแจ้งเตือน" data-en="Notify Me">รับแจ้งเตือน</button></div>
+      </div>
+      <div class="show">
+        <div class="ph"><img src="assets/img/minamo-card.webp" alt="MINAMO"><span class="badge gray" data-th="เร็ว ๆ นี้" data-en="SOON">เร็ว ๆ นี้</span></div>
+        <div class="body"><h3 data-th="MINAMO Fan Meeting in Bangkok" data-en="MINAMO Fan Meeting in Bangkok">MINAMO Fan Meeting in Bangkok</h3><div class="dt" data-th="19 — 20 ก.ย. 2026" data-en="Sep 19 — 20, 2026">19 — 20 ก.ย. 2026</div><button class="btn-s" onclick="location.hash='#'" data-th="รับแจ้งเตือน" data-en="Notify Me">รับแจ้งเตือน</button></div>
+      </div>
+      <div class="show">
+        <div class="ph"><img src="assets/img/kana-momonogi-card.webp" alt="Bromide Pack"><span class="badge" data-th="สินค้า" data-en="GOODS">สินค้า</span></div>
+        <div class="body"><h3 data-th="แพ็กโบรไมด์ UTO Bangkok 2026 — เลือกศิลปินได้" data-en="UTO Bangkok 2026 Bromide Pack — Pick Your Talent">แพ็กโบรไมด์ UTO Bangkok 2026 — เลือกศิลปินได้</h3><div class="dt" data-th="จัดส่งหลังงาน" data-en="Ships after event">จัดส่งหลังงาน</div><button class="btn-s solid" onclick="location.hash='#'" data-th="สั่งจอง" data-en="Pre-order">สั่งจอง</button></div>
+      </div>
+      <div class="show">
+        <div class="ph"><img src="assets/img/emika-shirakami-card.webp" alt="VIP Add-on"><span class="badge" data-th="กิจกรรมเสริม" data-en="ADD-ON">กิจกรรมเสริม</span></div>
+        <div class="body"><h3 data-th="โควตา 2-Shot รอบพิเศษ — เพิ่มจากบัตรเดิม" data-en="Special 2-Shot Quota — Add-on to Your Ticket">โควตา 2-Shot รอบพิเศษ — เพิ่มจากบัตรเดิม</h3><div class="dt" data-th="จำกัดจำนวนต่อรอบ" data-en="Limited per round">จำกัดจำนวนต่อรอบ</div><button class="btn-s solid" onclick="location.hash='#'" data-th="ซื้อเพิ่ม" data-en="Add-on">ซื้อเพิ่ม</button></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="ph"><img src="assets/img/kamiki-rei-face.webp" alt="Kamiki Rei Solo" style="object-position:center 24%"></div>
+      <div class="body">
+        <div class="pre" data-th="อีเวนต์เดี่ยวพิเศษ" data-en="Special Solo Event">อีเวนต์เดี่ยวพิเศษ</div>
+        <h3 data-th="Kamiki Rei Fan Meeting in Bangkok" data-en="Kamiki Rei Fan Meeting in Bangkok">Kamiki Rei Fan Meeting in Bangkok</h3>
+        <p data-th="งานเดี่ยวครั้งพิเศษในไทย — โควตา 2-Shot และ Dinner จำกัดจำนวน เปิดลงทะเบียนรอบแรกเร็ว ๆ นี้" data-en="A special solo event in Thailand — limited 2-Shot and Dinner quotas. First-round registration opens soon.">งานเดี่ยวครั้งพิเศษในไทย — โควตา 2-Shot และ Dinner จำกัดจำนวน เปิดลงทะเบียนรอบแรกเร็ว ๆ นี้</p>
+        <button class="btn-f" onclick="location.hash='#'" data-th="ลงทะเบียนรอบัตร" data-en="Register for Tickets">ลงทะเบียนรอบัตร</button>
+      </div>
+    </div>
+
+    <div class="info-strip">
+      <div class="info"><div class="ic">🎫</div><div><div class="t" data-th="1 บัญชี จองได้หลายงาน" data-en="One Account, Many Events">1 บัญชี จองได้หลายงาน</div><p data-th="จัดการบัตรทุกงานในที่เดียว" data-en="Manage all your tickets in one place.">จัดการบัตรทุกงานในที่เดียว</p></div></div>
+      <div class="info"><div class="ic">⏱️</div><div><div class="t" data-th="จองแล้วมีเวลา 10 นาที" data-en="10-Minute Hold">จองแล้วมีเวลา 10 นาที</div><p data-th="ระบบถือที่นั่งให้ระหว่างชำระเงิน" data-en="Seats held for you while you pay.">ระบบถือที่นั่งให้ระหว่างชำระเงิน</p></div></div>
+      <div class="info"><div class="ic">📱</div><div><div class="t" data-th="บัตรดิจิทัลพร้อม QR" data-en="Digital Ticket with QR">บัตรดิจิทัลพร้อม QR</div><p data-th="สแกนเข้างานจากมือถือ ไม่ต้องพิมพ์" data-en="Scan from your phone — no printing.">สแกนเข้างานจากมือถือ ไม่ต้องพิมพ์</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="f-topline">
+    <div class="wrap">
+      <span class="t" data-th="พร้อมเจอตัวจริงแล้วหรือยัง? ติดตามเราได้ทุกช่องทาง" data-en="Ready to meet the stars? Follow us everywhere.">พร้อมเจอตัวจริงแล้วหรือยัง? ติดตามเราได้ทุกช่องทาง</span>
+      <button class="btn-w" onclick="location.hash='#'" data-th="ติดตามข่าวสาร" data-en="Follow for News">ติดตามข่าวสาร</button>
+    </div>
+  </div>
+  <div class="f-grid">
+    <div class="f-brand">
+      <img src="assets/img/logo-uto-white.png" alt="UTO EVENT">
+      <p data-th="UTO Event — ผู้จัดงานและผู้ขายบัตร Fan Meeting ดาราญี่ปุ่นในไทย ซื้อขายโปร่งใส มีมาตรฐาน" data-en="UTO Event — organizer and official ticketing for Japanese star fan meetings in Thailand.">UTO Event — ผู้จัดงานและผู้ขายบัตร Fan Meeting ดาราญี่ปุ่นในไทย ซื้อขายโปร่งใส มีมาตรฐาน</p>
+    </div>
+    <div class="f-col">
+      <div class="t" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</div>
+      <span>contact@utoevent.com</span>
+      <span>LINE: @utoevent</span>
+      <span data-th="กรุงเทพมหานคร, ประเทศไทย" data-en="Bangkok, Thailand">กรุงเทพมหานคร, ประเทศไทย</span>
+    </div>
+    <div class="f-col">
+      <div class="t" data-th="ช่วยเหลือ" data-en="Help">ช่วยเหลือ</div>
+      <a href="#" data-th="คำถามที่พบบ่อย" data-en="FAQ">คำถามที่พบบ่อย</a>
+      <a href="#" data-th="วิธีซื้อบัตร" data-en="How to Buy">วิธีซื้อบัตร</a>
+      <a href="#" data-th="เงื่อนไขการคืนเงิน" data-en="Refund Policy">เงื่อนไขการคืนเงิน</a>
+    </div>
+    <div class="f-col">
+      <div class="t" data-th="ติดตามเรา" data-en="Follow">ติดตามเรา</div>
+      <a href="#">X (Twitter) — @utoevent</a>
+      <a href="#">Instagram — @utoevent</a>
+      <a href="#">Facebook — UTO Event</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="wrap">
+      <span>© 2026 UTO Event — utoevent.com</span>
+      <span class="b18">18+ ONLY</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function setLang(lang, btn){
+  document.querySelectorAll('[data-th]').forEach(el=>{
+    el.innerHTML = (lang==='en' && el.dataset.en!==undefined) ? el.dataset.en : el.dataset.th;
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+function jpToast(){
+  const t = document.getElementById('toast');
+  t.textContent = '日本語版は準備中です — เวอร์ชันภาษาญี่ปุ่นกำลังเตรียมข้อมูล';
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2600);
+}
+</script>
+</body>
+</html>

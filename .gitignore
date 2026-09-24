@@ -1,0 +1,4 @@
+# รูปต้นฉบับความละเอียดสูง — เว็บใช้เวอร์ชัน jpg ใน shots/jpg/
+shots/*.png
+.DS_Store
+.mimosa/

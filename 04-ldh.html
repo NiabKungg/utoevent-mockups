@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UTO EVENT — Bangkok 2026 | Style 04 LDH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --panel:#0d0d0f;
+  --panel2:#131316;
+  --line:rgba(255,255,255,.14);
+  --white:#fff;
+  --dim:rgba(255,255,255,.6);
+  --red:#d0021b;
+  --sans:'Archivo','Prompt','Noto Sans Thai',sans-serif;
+  --th:'Prompt','Noto Sans Thai','Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--th);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 44px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:60;background:#fff;color:#111;border-bottom:1px solid #eee}
+.nav-in{max-width:1400px;margin:0 auto;padding:0 44px;height:76px;display:flex;align-items:center}
+.logo{height:34px}
+.nav-links{display:flex;gap:34px;margin:0 auto;font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.nav-links a{color:#222;padding:8px 0;transition:.2s}
+.nav-links a:hover{color:var(--red)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.badge18{font-family:var(--sans);font-size:9px;font-weight:800;color:#fff;background:var(--red);border-radius:3px;padding:4px 7px;letter-spacing:.08em}
+.langs{display:flex;gap:8px;font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#888}
+.langs button{background:none;border:none;cursor:pointer;color:inherit;font:inherit;letter-spacing:inherit;padding:4px 2px;border-bottom:2px solid transparent}
+.langs button.on{color:#111;border-color:var(--red)}
+.langs button:hover{color:#111}
+.btn-buy{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--red);color:#fff;border:none;padding:13px 26px;cursor:pointer;transition:.25s}
+.btn-buy:hover{filter:brightness(1.15)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-slide{position:absolute;inset:0}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:contrast(1.06) saturate(1.02)}
+.hero-slide::after{content:'';position:absolute;inset:0;background:
+  radial-gradient(1200px 620px at 50% 22%,transparent 0%,rgba(0,0,0,.25) 62%,rgba(0,0,0,.78) 100%),
+  linear-gradient(180deg,rgba(0,0,0,.55) 0%,transparent 30%,transparent 62%,rgba(0,0,0,.9) 100%)}
+.hero-content{position:relative;z-index:3;padding:0 24px;max-width:1000px}
+.hero-tag{font-family:var(--sans);font-size:12px;letter-spacing:.6em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:26px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+.hero h1{font-family:var(--sans);font-weight:900;font-size:clamp(52px,8.4vw,124px);line-height:.95;letter-spacing:.01em;text-transform:uppercase;text-shadow:0 6px 40px rgba(0,0,0,.55)}
+.hero h1 .thin{display:block;font-weight:400;font-size:clamp(18px,2.2vw,30px);letter-spacing:.5em;margin-top:22px;font-family:var(--th);font-weight:400}
+.hero-meta{margin-top:34px;display:inline-flex;gap:0;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);background:rgba(0,0,0,.25)}
+.hero-meta div{padding:14px 28px;border-right:1px solid rgba(255,255,255,.25)}
+.hero-meta div:last-child{border-right:none}
+.hero-meta .k{font-family:var(--sans);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+.hero-meta .v{font-family:var(--sans);font-weight:700;font-size:15px;margin-top:5px}
+.hero-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-giant{font-family:var(--sans);font-weight:900;font-size:14px;letter-spacing:.22em;text-transform:uppercase;padding:18px 46px;background:var(--red);color:#fff;border:none;cursor:pointer;transition:.25s;box-shadow:0 12px 34px rgba(208,2,27,.35)}
+.btn-giant:hover{transform:translateY(-2px)}
+.btn-ghost{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:18px 36px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.4);color:#fff;cursor:pointer;backdrop-filter:blur(6px);transition:.25s}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+.dots{position:absolute;bottom:36px;left:0;right:0;display:flex;gap:10px;justify-content:center;z-index:3}
+.dots i{width:26px;height:3px;background:rgba(255,255,255,.3)}
+.dots i.on{background:var(--red)}
+
+/* ---------- ticker ---------- */
+.marquee{background:var(--red);padding:12px 0;overflow:hidden;white-space:nowrap}
+.marquee-in{display:inline-block;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.3em;text-transform:uppercase;animation:mq 26s linear infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px}
+.sec-head h2{font-family:var(--sans);font-size:clamp(28px,3.4vw,44px);font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.sec-head h2 span{color:var(--red)}
+.sec-head .more{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--red);padding-bottom:6px;transition:.25s}
+.sec-head .more:hover{color:#fff}
+
+/* artists cinematic rows */
+.ar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.ar{position:relative;overflow:hidden;cursor:pointer}
+.ar .ph{aspect-ratio:3/3.9;overflow:hidden;background:var(--panel)}
+.ar img{width:100%;height:100%;object-fit:cover;object-position:top;filter:saturate(.9);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s}
+.ar:hover img{transform:scale(1.06);filter:saturate(1.05)}
+.ar .veil{position:absolute;inset:0;background:linear-gradient(185deg,transparent 42%,rgba(0,0,0,.94) 88%);}
+.ar .info{position:absolute;left:20px;right:20px;bottom:18px}
+.ar h3{font-family:var(--sans);font-size:16px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.ar .sub{font-size:12px;color:var(--dim);margin-top:4px}
+.ar .redline{width:34px;height:3px;background:var(--red);margin-bottom:10px}
+.ar.hero-card .ph img{filter:none}
+
+/* activities dark blocks */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.act{background:var(--panel);border:1px solid var(--line);padding:40px 34px;transition:.3s;position:relative;overflow:hidden}
+.act::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:.35s}
+.act:hover::before{transform:scaleY(1)}
+.act:hover{background:var(--panel2)}
+.act .no{font-family:var(--sans);font-size:40px;font-weight:900;color:rgba(255,255,255,.08);position:absolute;right:22px;top:14px}
+.act h3{font-family:var(--sans);font-size:19px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.act p{color:var(--dim);font-size:14px;line-height:1.9}
+
+/* schedule strip */
+.sched{border:1px solid var(--line)}
+.sched-head{display:grid;grid-template-columns:170px 1fr 1fr;background:var(--panel2);font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.sched-head div{padding:18px 26px;border-right:1px solid var(--line)}
+.sched-head div:last-child{border-right:none}
+.sched-head .day{color:var(--red)}
+.sched-row{display:grid;grid-template-columns:170px 1fr 1fr;border-top:1px solid var(--line)}
+.sched-row .t{padding:20px 26px;font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.08em;color:var(--dim);border-right:1px solid var(--line)}
+.sched-row .slot{padding:20px 26px;border-right:1px solid var(--line);font-size:14.5px;display:flex;align-items:center;gap:12px}
+.sched-row .slot:last-child{border-right:none}
+.sched-row .slot b{font-weight:600}
+.sched-row .slot .st{font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.16em;background:var(--red);color:#fff;padding:3px 8px;text-transform:uppercase}
+.sched-row .slot .st.free{background:#2e7d32}
+
+/* events */
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ev{border:1px solid var(--line);background:var(--panel);transition:.3s}
+.ev:hover{border-color:var(--red)}
+.ev .ph{aspect-ratio:16/10;overflow:hidden}
+.ev .ph img{width:100%;height:100%;object-fit:cover;object-position:top 22%;transition:transform .7s}
+.ev:hover .ph img{transform:scale(1.05)}
+.ev .body{padding:24px 26px 28px}
+.ev .dt{font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--red)}
+.ev h3{font-family:var(--sans);font-size:20px;font-weight:800;letter-spacing:.04em;margin-top:10px;text-transform:uppercase}
+.ev p{color:var(--dim);font-size:13.5px;margin-top:8px;line-height:1.8}
+.ev .btn-e{margin-top:18px;font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);background:none;color:#fff;padding:12px 24px;cursor:pointer;transition:.25s}
+.ev .btn-e:hover{border-color:var(--red);background:var(--red)}
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--panel)}
+.f-in{max-width:1240px;margin:0 auto;padding:70px 44px 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;padding-bottom:56px}
+.f-brand img{height:34px;margin-bottom:24px}
+.f-brand p{color:var(--dim);font-size:13.5px;line-height:2;max-width:340px}
+.f-col .t{font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:22px}
+.f-col a,.f-col span{display:block;color:var(--dim);font-size:13.5px;line-height:2.4;transition:.2s}
+.f-col a:hover{color:#fff}
+.f-bottom{border-top:1px solid var(--line);padding:26px 0;display:flex;justify-content:space-between;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);flex-wrap:wrap;gap:10px}
+.f-bottom .b18{border:1px solid var(--red);color:var(--red);padding:4px 10px;border-radius:3px;font-weight:800}
+
+.toast{position:fixed;left:50%;bottom:40px;transform:translate(-50%,20px);background:#1a1a1d;border:1px solid var(--line);color:#fff;padding:14px 26px;font-size:13.5px;opacity:0;pointer-events:none;transition:.4s;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* responsive */
+@media (max-width:1080px){
+  .ar-grid{grid-template-columns:repeat(3,1fr)}
+  .sched-head,.sched-row{grid-template-columns:110px 1fr 1fr}
+}
+@media (max-width:860px){
+  .nav-links{display:none}
+  .nav-in{padding:0 22px}
+  .wrap,.f-in{padding-left:22px;padding-right:22px}
+  .ar-grid{grid-template-columns:repeat(2,1fr)}
+  .acts{grid-template-columns:1fr 1fr}
+  .ev-grid{grid-template-columns:1fr}
+  .sched-head{grid-template-columns:90px 1fr 1fr;font-size:10px}
+  .sched-head div{padding:12px 14px}
+  .sched-row{grid-template-columns:90px 1fr 1fr}
+  .sched-row .t{padding:14px;font-size:13px}
+  .sched-row .slot{padding:14px;font-size:13px;flex-wrap:wrap}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:390px){
+  .ar-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .acts{grid-template-columns:1fr}
+  .hero-meta{flex-direction:column}
+  .hero-meta div{border-right:none;border-bottom:1px solid rgba(255,255,255,.25)}
+  .hero-meta div:last-child{border-bottom:none}
+  .f-grid{grid-template-columns:1fr}
+  .f-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<a href="index.html" style="position:fixed;left:14px;bottom:14px;z-index:90;background:rgba(20,20,24,.88);color:#fff;text-decoration:none;font-family:var(--th),sans-serif;font-size:12.5px;font-weight:500;padding:10px 16px;border-radius:22px;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);box-shadow:0 6px 18px rgba(0,0,0,.28);transition:.25s" onmouseover="this.style.background='#E11D48'" onmouseout="this.style.background='rgba(20,20,24,.88)'">← หน้ารวม 9 แบบ</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a href="#"><img src="assets/img/logo-uto-pink.png" alt="UTO EVENT" class="logo"></a>
+    <div class="nav-links">
+      <a href="#artists">Artist</a>
+      <a href="#activities" data-th="กิจกรรม" data-en="Activity">กิจกรรม</a>
+      <a href="#schedule" data-th="ตารางงาน" data-en="Schedule">ตารางงาน</a>
+      <a href="#events" data-th="อีเวนต์" data-en="Events">อีเวนต์</a>
+      <a href="#contact" data-th="ติดต่อ" data-en="Contact">ติดต่อ</a>
+    </div>
+    <div class="nav-right">
+      <span class="badge18">18+</span>
+      <div class="langs">
+        <button class="on" onclick="setLang('th',this)">TH</button>
+        <button onclick="setLang('en',this)">EN</button>
+        <button onclick="jpToast()">JP</button>
+      </div>
+      <button class="btn-buy" onclick="location.hash='#'" data-th="ซื้อบัตร" data-en="Tickets">ซื้อบัตร</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-slide"><img src="assets/img/seto-kanna-hero.webp" alt="Kanna Seto"></div>
+  <div class="hero-content">
+    <div class="hero-tag">UTO Event Presents</div>
+    <h1>UTO Bangkok<span class="thin" data-th="มหกรรมพบตัวจริงระดับพรีเมียม ประจำปี 2026" data-en="The Premium Fan Meeting Festival 2026">มหกรรมพบตัวจริงระดับพรีเมียม ประจำปี 2026</span></h1>
+    <div class="hero-meta">
+      <div><div class="k" data-th="วันที่" data-en="DATE">วันที่</div><div class="v">16 — 17 MAY 2026</div></div>
+      <div><div class="k" data-th="สถานที่" data-en="VENUE">สถานที่</div><div class="v" data-th="AVANI SUKHUMVIT ชั้น 7" data-en="AVANI SUKHUMVIT 7F">AVANI SUKHUMVIT ชั้น 7</div></div>
+      <div><div class="k">HEADLINER</div><div class="v">KANNA SETO</div></div>
+    </div>
+    <div class="hero-cta">
+      <button class="btn-giant" onclick="location.hash='#'" data-th="ซื้อบัตรเลยตอนนี้" data-en="Buy Tickets Now">ซื้อบัตรเลยตอนนี้</button>
+      <button class="btn-ghost" onclick="document.getElementById('artists').scrollIntoView()" data-th="ดูรายชื่อศิลปิน" data-en="View Lineup">ดูรายชื่อศิลปิน</button>
+    </div>
+  </div>
+  <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-in">
+    UTO BANGKOK 2026 ✦ 16—17 MAY ✦ AVANI SUKHUMVIT 7F ✦ 14 TALENTS ✦ 2-SHOT · DINNER · LIMITED GOODS ✦&nbsp;
+    UTO BANGKOK 2026 ✦ 16—17 MAY ✦ AVANI SUKHUMVIT 7F ✦ 14 TALENTS ✦ 2-SHOT · DINNER · LIMITED GOODS ✦&nbsp;
+  </div>
+</div>
+
+<section id="artists">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-th="ศิลปิน <span>ผู้เข้าร่วม</span>" data-en="Joining <span>Artists</span>">ศิลปิน <span>ผู้เข้าร่วม</span></h2>
+      <a class="more" href="#" data-th="ดูทั้ง 14 คน" data-en="All 14 Artists">ดูทั้ง 14 คน</a>
+    </div>
+    <div class="ar-grid">
+      <div class="ar hero-card"><div class="ph"><img src="assets/img/seto-kanna-card.webp" alt="Kanna Seto"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Kanna Seto</h3><div class="sub">HEADLINER</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/saika-kawakita-card.webp" alt="Saika Kawakita"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Saika Kawakita</h3><div class="sub">169 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/kamiki-rei-card.webp" alt="Kamiki Rei"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Kamiki Rei</h3><div class="sub">169 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/minamo-card.webp" alt="MINAMO"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>MINAMO</h3><div class="sub">153 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/rena-miyashita-card.webp" alt="Rena Miyashita"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Rena Miyashita</h3><div class="sub">162 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/kana-momonogi-card.webp" alt="Kana Momonogi"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Kana Momonogi</h3><div class="sub">153 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/emika-shirakami-card.webp" alt="Emika Shirakami"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Emika Shirakami</h3><div class="sub">168 CM</div></div></div>
+      <div class="ar"><div class="ph"><img src="assets/img/momo-sakura-card.webp" alt="Momo Sakura"></div><div class="veil"></div><div class="info"><div class="redline"></div><h3>Momo Sakura</h3><div class="sub">160 CM</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="activities" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-th="กิจกรรม <span>พบตัวจริง</span>" data-en="Meet &amp; Greet <span>Activities</span>">กิจกรรม <span>พบตัวจริง</span></h2>
+    </div>
+    <div class="acts">
+      <div class="act"><div class="no">01</div><h3 data-th="Fan Meeting Stage" data-en="Fan Meeting Stage">Fan Meeting Stage</h3><p data-th="เวทีใหญ่พูดคุย เกม และช่วงพิเศษที่แฟนโหวตหัวข้อเองได้" data-en="Main stage talks, games and fan-voted special segments.">เวทีใหญ่พูดคุย เกม และช่วงพิเศษที่แฟนโหวตหัวข้อเองได้</p></div>
+      <div class="act"><div class="no">02</div><h3 data-th="2-Shot Photo" data-en="2-Shot Photo">2-Shot Photo</h3><p data-th="ช่วงเวลาตัวต่อตัวที่ถ่ายรูปคู่กับศิลปินในแบบของคุณ" data-en="Your one-on-one two-shot moment, your way.">ช่วงเวลาตัวต่อตัวที่ถ่ายรูปคู่กับศิลปินในแบบของคุณ</p></div>
+      <div class="act"><div class="no">03</div><h3 data-th="Dinner with Artist" data-en="Dinner with Artist">Dinner with Artist</h3><p data-th="ดินเนอร์พรีเมียมโควตาจำกัด บรรยากาศใกล้ชิดที่สุด" data-en="A limited premium dinner — the closest atmosphere yet.">ดินเนอร์พรีเมียมโควตาจำกัด บรรยากาศใกล้ชิดที่สุด</p></div>
+      <div class="act"><div class="no">04</div><h3 data-th="Photo Session" data-en="Photo Session">Photo Session</h3><p data-th="โซนถ่ายภาพเซ็ตติ้งพิเศษทั่วพื้นที่งาน" data-en="Special-set photo zones across the venue.">โซนถ่ายภาพเซ็ตติ้งพิเศษทั่วพื้นที่งาน</p></div>
+      <div class="act"><div class="no">05</div><h3 data-th="Limited Goods" data-en="Limited Goods">Limited Goods</h3><p data-th="ของสะสมและของขวัญเฉพาะงานที่หาไม่ได้ที่อื่น" data-en="Collectibles and gifts found nowhere else.">ของสะสมและของขวัญเฉพาะงานที่หาไม่ได้ที่อื่น</p></div>
+      <div class="act"><div class="no">06</div><h3 data-th="Signed Bromide" data-en="Signed Bromide">Signed Bromide</h3><p data-th="โบรไมด์เซ็นชื่อเฉพาะบัตร VVIP จำนวนจำกัด" data-en="Signed bromides — strictly limited to VVIP.">โบรไมด์เซ็นชื่อเฉพาะบัตร VVIP จำนวนจำกัด</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-th="ตาราง <span>เวทีหลัก</span>" data-en="Main <span>Stage Schedule</span>">ตาราง <span>เวทีหลัก</span></h2>
+      <a class="more" href="#" data-th="ดาวน์โหลดตารางเต็ม" data-en="Download Full Timetable">ดาวน์โหลดตารางเต็ม</a>
+    </div>
+    <div class="sched">
+      <div class="sched-head">
+        <div class="day" data-th="เวลา" data-en="TIME">เวลา</div>
+        <div data-th="วันศุกร์ 16 พ.ค." data-en="FRI · MAY 16">วันศุกร์ 16 พ.ค.</div>
+        <div data-th="วันเสาร์ 17 พ.ค." data-en="SAT · MAY 17">วันเสาร์ 17 พ.ค.</div>
+      </div>
+      <div class="sched-row">
+        <div class="t">11:00</div>
+        <div class="slot"><b data-th="พิธีเปิดงาน" data-en="Opening Ceremony">พิธีเปิดงาน</b><span class="st free" data-th="เข้าฟรี" data-en="Free">เข้าฟรี</span></div>
+        <div class="slot"><b data-th="เวทีเปิดตัวศิลปิน Day 2" data-en="Day 2 Artists Opening">เวทีเปิดตัวศิลปิน Day 2</b><span class="st free" data-th="เข้าฟรี" data-en="Free">เข้าฟรี</span></div>
+      </div>
+      <div class="sched-row">
+        <div class="t">13:00</div>
+        <div class="slot"><b>Kanna Seto</b><span class="st">Stage</span></div>
+        <div class="slot"><b>Saika Kawakita</b><span class="st">Stage</span></div>
+      </div>
+      <div class="sched-row">
+        <div class="t">15:00</div>
+        <div class="slot"><b>Kamiki Rei · MINAMO</b><span class="st">Stage</span></div>
+        <div class="slot"><b>Momo Sakura · miru</b><span class="st">Stage</span></div>
+      </div>
+      <div class="sched-row">
+        <div class="t">17:30</div>
+        <div class="slot"><b data-th="2-Shot รอบบ่าย" data-en="2-Shot — Afternoon Round">2-Shot รอบบ่าย</b><span class="st">VIP+</span></div>
+        <div class="slot"><b data-th="2-Shot รอบสุดท้าย" data-en="2-Shot — Final Round">2-Shot รอบสุดท้าย</b><span class="st">VIP+</span></div>
+      </div>
+      <div class="sched-row">
+        <div class="t">19:00</div>
+        <div class="slot"><b data-th="Dinner with Artist โควตา VVIP" data-en="Dinner with Artist — VVIP">Dinner with Artist โควตา VVIP</b><span class="st">VVIP</span></div>
+        <div class="slot"><b data-th="Closing Talk ทั้งทีม" data-en="Closing Talk — All Cast">Closing Talk ทั้งทีม</b><span class="st free" data-th="เข้าฟรี" data-en="Free">เข้าฟรี</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="events" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-th="อีเวนต์ <span>ถัดไป</span>" data-en="Next <span>Events</span>">อีเวนต์ <span>ถัดไป</span></h2>
+    </div>
+    <div class="ev-grid">
+      <div class="ev">
+        <div class="ph"><img src="assets/img/seto-kanna-hero.webp" alt="UTO Bangkok 2026"></div>
+        <div class="body"><div class="dt">16 — 17 MAY 2026</div><h3>UTO Bangkok 2026</h3><p data-th="Avani Sukhumvit ชั้น 7 · ศิลปิน 14 คน · 2 วันเต็ม" data-en="Avani Sukhumvit 7F · 14 talents · 2 full days">Avani Sukhumvit ชั้น 7 · ศิลปิน 14 คน · 2 วันเต็ม</p><button class="btn-e" onclick="location.hash='#'" data-th="ซื้อบัตร" data-en="Get Tickets">ซื้อบัตร</button></div>
+      </div>
+      <div class="ev">
+        <div class="ph"><img src="assets/img/kamiki-rei-card.webp" alt="Kamiki Rei"></div>
+        <div class="body"><div class="dt">10 — 11 OCT 2026</div><h3 data-th="Kamiki Rei Fan Meeting" data-en="Kamiki Rei Fan Meeting">Kamiki Rei Fan Meeting</h3><p data-th="งานเดี่ยวพิเศษในกรุงเทพฯ · โควตาจำกัด" data-en="Special solo event in Bangkok · Limited quota">งานเดี่ยวพิเศษในกรุงเทพฯ · โควตาจำกัด</p><button class="btn-e" onclick="location.hash='#'" data-th="แจ้งเตือนฉัน" data-en="Notify Me">แจ้งเตือนฉัน</button></div>
+      </div>
+      <div class="ev">
+        <div class="ph"><img src="assets/img/minamo-hero.webp" alt="MINAMO"></div>
+        <div class="body"><div class="dt">19 — 20 SEP 2026</div><h3 data-th="MINAMO Fan Meeting" data-en="MINAMO Fan Meeting">MINAMO Fan Meeting</h3><p data-th="Photo Session · Gift Set · Merchandise เฉพาะงาน" data-en="Photo Session · Gift Set · Event-only merch">Photo Session · Gift Set · Merchandise เฉพาะงาน</p><button class="btn-e" onclick="location.hash='#'" data-th="ดูรายละเอียด" data-en="Details">ดูรายละเอียด</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="f-in">
+    <div class="f-grid">
+      <div class="f-brand">
+        <img src="assets/img/logo-uto-white.png" alt="UTO EVENT">
+        <p data-th="UTO Event — ผู้จัด Fan Meeting ดาราญี่ปุ่นระดับพรีเมียมในประเทศไทย มาตรฐานการจัดงานระดับมืออาชีพ" data-en="UTO Event — premium Japanese star fan meetings in Thailand, professionally produced.">UTO Event — ผู้จัด Fan Meeting ดาราญี่ปุ่นระดับพรีเมียมในประเทศไทย มาตรฐานการจัดงานระดับมืออาชีพ</p>
+      </div>
+      <div class="f-col">
+        <div class="t" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</div>
+        <span>contact@utoevent.com</span>
+        <span>LINE: @utoevent</span>
+        <span data-th="กรุงเทพมหานคร, ประเทศไทย" data-en="Bangkok, Thailand">กรุงเทพมหานคร, ประเทศไทย</span>
+      </div>
+      <div class="f-col">
+        <div class="t" data-th="ติดตามเรา" data-en="Follow">ติดตามเรา</div>
+        <a href="#">X (Twitter) — @utoevent</a>
+        <a href="#">Instagram — @utoevent</a>
+        <a href="#">Facebook — UTO Event</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 UTO Event — utoevent.com</span>
+      <span class="b18">18+ ONLY</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function setLang(lang, btn){
+  document.querySelectorAll('[data-th]').forEach(el=>{
+    el.innerHTML = (lang==='en' && el.dataset.en!==undefined) ? el.dataset.en : el.dataset.th;
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+function jpToast(){
+  const t = document.getElementById('toast');
+  t.textContent = '日本語版は準備中です — เวอร์ชันภาษาญี่ปุ่นกำลังเตรียมข้อมูล';
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2600);
+}
+</script>
+</body>
+</html>
