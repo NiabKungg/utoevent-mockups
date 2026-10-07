@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rei Kamiki | UTO EVENT</title>
+<title>Mayuki Ito | UTO EVENT</title>
 <style>
 :root{--pink:#EE4C9B;--pink-dark:#BA3B79;--ink:#0d0d0f;--bg:#fff;--bg2:#f7f7f8;--line:#e8e8ea;--gray:#6b7280;--gray2:#9ca3af}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -23,8 +23,6 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:10px;text-decoration:none;cursor:pointer;border:none;font-family:inherit}
 .btn-primary{background:var(--pink);color:#fff;padding:9px 18px;font-size:.85rem}
 .btn-primary:hover{background:var(--pink-dark)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(13,13,15,.35);padding:9px 18px;font-size:.85rem;text-decoration:none}
-.btn-ghost:hover{border-color:var(--ink)}
 .nav .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:10px 9px;background:rgba(13,13,15,.04);border:1px solid rgba(13,13,15,.16);border-radius:8px;cursor:pointer;flex-shrink:0}
 .nav .burger span{display:block;height:2px;width:100%;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
 .nav .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -67,6 +65,7 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .ev .img{aspect-ratio:16/10;background-size:cover;background-position:center 20%;position:relative}
 .ev .chip{position:absolute;top:12px;left:12px}
 .chip-pink{display:inline-flex;width:fit-content;align-items:center;font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;color:#fff;background:var(--pink)}
+.chip-gray{display:inline-flex;width:fit-content;align-items:center;font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;color:#fff;background:rgba(13,13,15,.72);border:1px solid rgba(255,255,255,.3)}
 .ev .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
 .ev h3{font-size:1.05rem;font-weight:800}
 .ev .jp{color:var(--gray2);font-size:.85rem;letter-spacing:.2em}
@@ -98,7 +97,6 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
 }
 @media(max-width:600px){
   .ev-grid{grid-template-columns:1fr}
-  .media-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -111,7 +109,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
     <a href="mockup-multiartist.html#events">EVENTS</a><a href="mockup-multiartist.html#events">TICKETS</a><a href="mockup-multiartist.html#artists">ACTRESSES</a><a href="#">READ</a><a href="#">SHOP</a><a href="mockup-about.html">ABOUT US</a>
   </div>
   <div class="langs"><span class="on">TH</span><span>EN</span><span>JP</span></div>
-  <a class="btn btn-primary" href="https://www.ticketmelon.com/th/uto/kamiki" target="_blank" rel="noopener">ซื้อบัตร</a>
+  <a class="btn btn-primary" href="https://www.ticketmelon.com/uto" target="_blank" rel="noopener">ซื้อบัตร</a>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <div class="mobile-menu" id="mobileMenu">
     <div class="langs"><span class="on">TH</span><span>EN</span><span>JP</span></div>
@@ -129,19 +127,18 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
   <div class="container">
     <a class="backlink" href="mockup-multiartist.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>กลับหน้าแรก</a>
     <div class="profile">
-      <div class="photo"><img src="assets/img/kamiki-rei-face.webp" alt="Rei Kamiki"></div>
+      <div class="photo"><img src="assets/img/mayuki-ito-face.webp" alt="Mayuki Ito"></div>
       <div>
         <div class="kicker">Actress</div>
-        <h1>Rei Kamiki</h1>
-        <div class="jp">神木麗</div>
+        <h1>Mayuki Ito</h1>
+        <div class="jp">伊藤舞雪</div>
         <div class="ilist">
-          <div class="irow"><span class="k">วันเกิด</span><span class="v">20 ธันวาคม 1999</span></div>
-          <div class="irow"><span class="k">ความสูง</span><span class="v">169 cm</span></div>
-          <div class="irow"><span class="k">สัดส่วน</span><span class="v">95(G)-60-85</span></div>
+          <div class="irow"><span class="k">วันเกิด</span><span class="v">30 พฤศจิกายน 1997</span></div>
+          <div class="irow"><span class="k">ความสูง</span><span class="v">160 cm</span></div>
+          <div class="irow"><span class="k">สัดส่วน</span><span class="v">88(F)-54-89</span></div>
         </div>
         <div class="ctas">
           <a class="btn btn-primary" href="https://www.t-powers.co.jp/contact/" target="_blank" rel="noopener">Contact<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a>
-          <a class="btn btn-ghost" href="https://www.ticketmelon.com/th/uto/kamiki" target="_blank" rel="noopener">ซื้อบัตร</a>
         </div>
       </div>
     </div>
@@ -154,12 +151,19 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
     <div class="kicker">Event</div>
     <h2>อีเวนต์ที่ร่วมแสดง</h2>
     <div class="ev-grid one">
-      <a class="ev" href="https://utoevent.com/" target="_blank" rel="noopener">
-        <div class="img" style="background-image:url('assets/img/kamiki-rei-card.webp')"><span class="chip-pink">งานที่กำลังจะมาถึง</span></div>
+      <div class="ev">
+        <div class="img" style="background-image:url('assets/img/mayuki-ito-card.webp')"><span class="chip-gray">จัดไปแล้ว</span></div>
         <div class="body">
-          <h3>REI KAMIKI 1st Fan Meeting in Bangkok</h3>
-          <span class="jp">神木麗</span>
-          <div class="meta"><span>10 - 11 ตุลาคม 2026</span><span>Avani Sukhumvit Bangkok · Cherchan Studio</span></div>
+          <h3>Mayuki Ito 1st Fan Meeting in Bangkok</h3>
+          <span class="jp">伊藤舞雪</span>
+          <div class="meta"><span>24 - 25 สิงหาคม 2024</span></div>
+        </div>
+      </div>
+      <a class="ev" href="https://www.ticketmelon.com/uto/utobkk2026" target="_blank" rel="noopener">
+        <div class="img" style="background-image:url('assets/img/seto-kanna-card.webp')"><span class="chip-gray">จัดไปแล้ว</span></div>
+        <div class="body">
+          <h3>UTO BANGKOK 2026</h3>
+          <div class="meta"><span>16 - 17 พฤษภาคม 2026</span><span>Avani Sukhumvit Bangkok ชั้น 7</span></div>
           <span class="go">ดูรายละเอียดงาน</span>
         </div>
       </a>
