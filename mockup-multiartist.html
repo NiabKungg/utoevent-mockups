@@ -66,6 +66,12 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .about-grid img{width:100%;border-radius:14px;display:block}
 .about-text p{color:var(--gray);font-size:.97rem;line-height:1.85;margin-bottom:14px}
 .about-text p:first-child{color:var(--ink);font-weight:600}
+.about-slider{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:var(--bg2)}
+.about-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.about-slider img.on{opacity:1}
+.adots{position:absolute;bottom:12px;right:12px;display:flex;gap:7px;z-index:3}
+.adots button{width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.55)}
+.adots button.on{background:var(--pink);transform:scale(1.2)}
 
 /* events grid */
 .ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
@@ -180,7 +186,13 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
         <p>UTO EVENT ให้ความสำคัญกับทุกรายละเอียด ตั้งแต่การพัฒนาแนวคิด การประสานงานระหว่างประเทศ การเดินทางและสถานที่ ไปจนถึงการออกแบบประสบการณ์และการดำเนินงาน เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างมืออาชีพและสร้างคุณค่าให้กับศิลปิน พาร์ตเนอร์ และแฟน ๆ</p>
         <p>เราไม่ได้มองบทบาทของ UTO EVENT เพียงในฐานะผู้จัดอีเวนต์ แต่ในฐานะพาร์ตเนอร์ที่สร้างโอกาสใหม่ ๆ ให้กับศิลปินญี่ปุ่นในระดับนานาชาติ พร้อมสร้างประสบการณ์ที่มีเอกลักษณ์และน่าจดจำให้กับแฟน ๆ</p>
       </div>
-      <img src="assets/img/karen-about-2026.webp" alt="บรรยากาศงาน UTO Event">
+      <div class="about-slider" id="aboutSlider">
+        <img class="on" src="assets/img/karen-about-2026.webp" alt="Karen Kaede">
+        <img src="assets/img/kamiki-rei-face.webp" alt="Rei Kamiki">
+        <img src="assets/img/minamo-face.webp" alt="MINAMO">
+        <img src="assets/img/seto-kanna-face.webp" alt="Kanna Seto">
+        <div class="adots" id="aboutDots"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -292,6 +304,25 @@ function restart(){clearInterval(timer); timer=setInterval(()=>go(cur+1),6000);}
 document.getElementById('next').addEventListener('click',()=>{go(cur+1);restart();});
 document.getElementById('prev').addEventListener('click',()=>{go(cur-1);restart();});
 restart();
+// about section mini slider
+const aImgs=[...document.querySelectorAll('#aboutSlider img')];
+const aDotsBox=document.getElementById('aboutDots');
+let aCur=0, aTimer=null;
+aImgs.forEach((_,i)=>{
+  const d=document.createElement('button');
+  d.className='adot'+(i===0?' on':'');
+  d.setAttribute('aria-label','ภาพ '+(i+1));
+  d.addEventListener('click',()=>{aGo(i);aRestart();});
+  aDotsBox.appendChild(d);
+});
+const aDots=[...aDotsBox.children];
+function aGo(i){
+  aImgs[aCur].classList.remove('on'); aDots[aCur].classList.remove('on');
+  aCur=(i+aImgs.length)%aImgs.length;
+  aImgs[aCur].classList.add('on'); aDots[aCur].classList.add('on');
+}
+function aRestart(){clearInterval(aTimer); aTimer=setInterval(()=>aGo(aCur+1),4500);}
+aRestart();
 </script>
 </body>
 </html>
