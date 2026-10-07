@@ -89,11 +89,18 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .note-scale{margin-top:18px;color:var(--gray2);font-size:.85rem}
 
 /* footer */
-footer{background:var(--ink);color:#fff;padding:44px 0}
-footer .flist{display:flex;flex-direction:column;gap:8px;font-size:.9rem}
-footer a{color:rgba(255,255,255,.75);text-decoration:none}
-footer a:hover{color:var(--pink)}
-footer .bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.45);font-size:.8rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer{background:var(--ink);color:rgba(255,255,255,.85);padding:56px 0 0}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+footer .flist{display:flex;flex-direction:column;gap:9px;font-size:.92rem}
+footer .flist a{display:inline-flex;align-items:center;gap:9px;font-weight:600;color:inherit;text-decoration:none}
+footer .flist a:hover{color:var(--pink)}
+footer .flist svg{color:var(--pink);flex-shrink:0}
+footer .brandline{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+footer .brandline img{height:38px}
+footer .desc{font-size:.88rem;color:rgba(255,255,255,.6);max-width:340px}
+footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding:18px 0 22px;font-size:.8rem;color:rgba(255,255,255,.45)}
+@media(max-width:900px){footer .cols{grid-template-columns:1fr}}
 
 @media(max-width:900px){
   .nav .links{display:none}
@@ -244,19 +251,35 @@ footer .bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,25
       <a class="art" href="#"><img src="assets/img/remu-suzumori-face.webp" alt="Remu Suzumori"><div class="nm">REMU SUZUMORI<span class="jp">涼森れむ</span></div></a>
       <a class="art" href="#"><img src="assets/img/miru-face.webp" alt="Miru"><div class="nm">MIRU<span class="jp">ミル</span></div></a>
     </div>
-    <p class="note-scale">หมายเหตุดีไซน์: ขนาดการ์ดรูปศิลปินแต่ละคนจะกำหนดตามกฎที่ทางบริษัทของศิลปินแต่ละคนล็อกมา (เล็กต้องเล็ก ใหญ่ต้องใหญ่) ไม่ปรับเท่ากันหมด และชื่อศิลปินแสดงตามแบบที่ทางศิลปินกำหนด (ตัวพิมพ์ใหญ่-เล็กตามเงื่อนไขของแต่ละคน)</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer id="contact">
   <div class="container">
-    <div class="flist">
-      <span>UTO Event · ผู้จัดงาน Fan Meeting ในประเทศไทย</span>
-      <a href="#">Instagram @utoevent</a>
-      <a href="#">Facebook utoevent</a>
+    <div class="cols">
+      <div>
+        <div class="brandline"><img src="assets/img/logo-uto-white.png" alt="UTO Event"></div>
+        <p class="desc">ผู้จัดงานและบริษัทออร์แกไนเซอร์ Fan Meeting ในประเทศไทย</p>
+      </div>
+      <div>
+        <h4>ติดต่อ</h4>
+        <div class="flist">
+          <span style="display:inline-flex;align-items:center;gap:9px;font-weight:600;opacity:.55"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>—</span>
+          <a href="https://www.instagram.com/utoevent/" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram @utoevent</a>
+          <a href="https://web.facebook.com/utoevent" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook utoevent</a>
+        </div>
+      </div>
+      <div>
+        <h4>บัตรทั้งหมด</h4>
+        <div class="flist">
+          <a href="https://www.ticketmelon.com/th/uto/reikamiki-fanmeeting" target="_blank" rel="noopener">Fan Meeting</a>
+          <a href="https://www.ticketmelon.com/th/uto/reikamiki-photo" target="_blank" rel="noopener">Photo Session</a>
+          <a href="https://www.ticketmelon.com/th/uto/reikamiki-dinner" target="_blank" rel="noopener">Special Dinner</a>
+        </div>
+      </div>
     </div>
-    <div class="bottom"><span>MOCKUP เพื่อประกอบการพิจารณา ไม่ใช่หน้าเว็บจริง</span><span>UTO Event</span></div>
+    <div class="bottom"><span>© 2026 UTO EVENT</span></div>
   </div>
 </footer>
 
