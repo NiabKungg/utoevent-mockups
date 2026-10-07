@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rei Kamiki | UTO EVENT</title>
+<title>About Us | UTO EVENT</title>
 <style>
 :root{--pink:#EE4C9B;--pink-dark:#BA3B79;--ink:#0d0d0f;--bg:#fff;--bg2:#f7f7f8;--line:#e8e8ea;--gray:#6b7280;--gray2:#9ca3af}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -17,14 +17,13 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .nav .links{display:flex;gap:22px;margin-left:auto}
 .nav .links a{color:rgba(13,13,15,.78);font-size:.9rem;font-weight:600;text-decoration:none}
 .nav .links a:hover{color:var(--pink)}
+.nav .links a.on{color:var(--pink)}
 .langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .langs span{padding:5px 11px;font-size:.75rem;font-weight:700;color:var(--gray2)}
 .langs .on{background:var(--pink);color:#fff}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:10px;text-decoration:none;cursor:pointer;border:none;font-family:inherit}
 .btn-primary{background:var(--pink);color:#fff;padding:9px 18px;font-size:.85rem}
 .btn-primary:hover{background:var(--pink-dark)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(13,13,15,.35);padding:9px 18px;font-size:.85rem;text-decoration:none}
-.btn-ghost:hover{border-color:var(--ink)}
 .nav .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:10px 9px;background:rgba(13,13,15,.04);border:1px solid rgba(13,13,15,.16);border-radius:8px;cursor:pointer;flex-shrink:0}
 .nav .burger span{display:block;height:2px;width:100%;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
 .nav .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -35,50 +34,22 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 .nav .mobile-menu a{color:rgba(13,13,15,.85);font-size:.95rem;font-weight:600;padding:14px 24px;border-top:1px solid rgba(13,13,15,.06);text-decoration:none}
 .nav .mobile-menu a:first-of-type{border-top:none}
 .nav .mobile-menu a:hover{color:var(--pink)}
+.nav .mobile-menu a.on{color:var(--pink)}
 
-/* sections */
+/* about */
 .sec{padding:64px 0}
-.sec-alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .kicker{color:var(--pink);font-weight:800;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
 .kicker::before{content:"";width:26px;height:3px;background:var(--pink);border-radius:2px}
-.sec h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:900;margin:10px 0 8px}
-.sec .lead{color:var(--gray);max-width:760px}
-
-/* back link */
-.backlink{display:inline-flex;align-items:center;gap:8px;margin:22px 0 0;color:var(--gray);font-weight:700;font-size:.88rem;text-decoration:none}
-.backlink:hover{color:var(--pink)}
-
-/* profile */
-.profile{display:grid;grid-template-columns:380px 1fr;gap:46px;align-items:start;margin-top:26px}
-.profile .photo{border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--bg2)}
-.profile .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.profile h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;line-height:1.1}
-.profile .jp{color:var(--gray2);font-weight:700;letter-spacing:.3em;margin-top:6px;font-size:1.05rem}
-.ilist{margin-top:22px;border-top:1px solid var(--line)}
-.irow{display:flex;gap:18px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:.95rem;align-items:baseline}
-.irow .k{width:110px;flex-shrink:0;color:var(--gray);font-weight:600}
-.irow .v{font-weight:700}
-.irow .v .none{color:var(--gray2);font-weight:600}
-.profile .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
-
-/* event card */
-.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
-.ev-grid.one{grid-template-columns:1fr;max-width:560px}
-.ev{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit}
-.ev .img{aspect-ratio:16/10;background-size:cover;background-position:center 20%;position:relative}
-.ev .chip{position:absolute;top:12px;left:12px}
-.chip-pink{display:inline-flex;width:fit-content;align-items:center;font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;color:#fff;background:var(--pink)}
-.ev .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
-.ev h3{font-size:1.05rem;font-weight:800}
-.ev .jp{color:var(--gray2);font-size:.85rem;letter-spacing:.2em}
-.ev .meta{color:var(--gray);font-size:.86rem;margin-top:6px;display:flex;flex-direction:column;gap:2px}
-.ev .go{color:var(--pink);font-weight:700;font-size:.86rem;margin-top:auto;padding-top:12px}
-
-/* media */
-.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-.mtile{aspect-ratio:16/9;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--ink);font-weight:700;font-size:.92rem;text-align:center;padding:16px;text-decoration:none;transition:border-color .2s}
-.mtile:hover{border-color:var(--pink)}
-.mtile svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6}
+.sec h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:900;margin:10px 0 8px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start;margin-top:26px}
+.about-text p{color:var(--gray);font-size:.97rem;line-height:1.85;margin-bottom:14px}
+.about-text p:first-child{color:var(--ink);font-weight:600}
+.about-slider{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:var(--bg2)}
+.about-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.about-slider img.on{opacity:1}
+.adots{position:absolute;bottom:12px;right:12px;display:flex;gap:7px;z-index:3}
+.adots button{width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:rgba(255,255,255,.55)}
+.adots button.on{background:var(--pink);transform:scale(1.2)}
 
 /* footer SNS + contact */
 footer{background:var(--ink);color:rgba(255,255,255,.85);padding:56px 0 0}
@@ -99,13 +70,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
   .nav>.langs{display:none}
   .nav .btn{margin-left:auto}
   .nav .mobile-menu.open{display:flex}
-  .profile{grid-template-columns:1fr;gap:26px}
-  .profile .photo{max-width:420px}
-  .ev-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .ev-grid{grid-template-columns:1fr}
-  .media-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-slider{max-width:440px}
 }
 </style>
 </head>
@@ -115,7 +81,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
 <nav class="nav" id="nav">
   <a class="logo" href="mockup-multiartist.html"><img src="assets/img/logo-uto-pink.png" alt="UTO Event"></a>
   <div class="links">
-    <a href="mockup-multiartist.html#events">EVENTS</a><a href="mockup-multiartist.html#events">TICKETS</a><a href="mockup-multiartist.html#artists">ACTRESSES</a><a href="#">READ</a><a href="#">SHOP</a><a href="mockup-about.html">ABOUT US</a>
+    <a href="mockup-multiartist.html#events">EVENTS</a><a href="mockup-multiartist.html#events">TICKETS</a><a href="mockup-multiartist.html#artists">ACTRESSES</a><a href="#">READ</a><a href="#">SHOP</a><a class="on" href="mockup-about.html">ABOUT US</a>
   </div>
   <div class="langs"><span class="on">TH</span><span>EN</span><span>JP</span></div>
   <a class="btn btn-primary" href="https://www.ticketmelon.com/th/uto/kamiki" target="_blank" rel="noopener">ซื้อบัตร</a>
@@ -127,63 +93,29 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
     <a href="mockup-multiartist.html#artists">ACTRESSES</a>
     <a href="#">READ</a>
     <a href="#">SHOP</a>
-    <a href="mockup-about.html">ABOUT US</a>
+    <a class="on" href="mockup-about.html">ABOUT US</a>
   </div>
 </nav>
 
-<!-- PROFILE -->
-<section class="sec" id="profile">
+<!-- ABOUT -->
+<section class="sec" id="about">
   <div class="container">
-    <a class="backlink" href="mockup-multiartist.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg>กลับหน้าแรก</a>
-    <div class="profile">
-      <div class="photo"><img src="assets/img/kamiki-rei-face.webp" alt="Rei Kamiki"></div>
-      <div>
-        <div class="kicker">Actress</div>
-        <h1>Rei Kamiki</h1>
-        <div class="jp">神木麗</div>
-        <div class="ilist">
-          <div class="irow"><span class="k">วันเกิด</span><span class="v">20 ธันวาคม 1999</span></div>
-          <div class="irow"><span class="k">ความสูง</span><span class="v">169 cm</span></div>
-          <div class="irow"><span class="k">สัดส่วน</span><span class="v">95(G)-60-85</span></div>
-          <div class="irow"><span class="k">SNS</span><span class="v"><span class="none">-</span></span></div>
-        </div>
-        <div class="ctas">
-          <a class="btn btn-primary" href="https://www.t-powers.co.jp/contact/" target="_blank" rel="noopener">Contact<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a>
-          <a class="btn btn-ghost" href="https://www.ticketmelon.com/th/uto/kamiki" target="_blank" rel="noopener">ซื้อบัตร</a>
-        </div>
+    <div class="kicker">About us</div>
+    <h2>UTO EVENT</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>UTO EVENT คือบริษัทผู้สร้างสรรค์อีเวนต์และประสบการณ์ระดับพรีเมียม ที่เชื่อมโยงศิลปินจากประเทศญี่ปุ่นเข้ากับแฟน ๆ และโอกาสใหม่ ๆ ในตลาดต่างประเทศ</p>
+        <p>เราทำงานร่วมกับศิลปิน ต้นสังกัด และพาร์ตเนอร์ในประเทศญี่ปุ่นอย่างใกล้ชิด เพื่อพัฒนาอีเวนต์และโปรเจกต์ที่สะท้อนเอกลักษณ์ของศิลปินแต่ละคน ตั้งแต่ Fan Meeting, Photo Session และ Special Dinner ไปจนถึงโปรเจกต์และความร่วมมือในรูปแบบพิเศษ</p>
+        <p>UTO EVENT ให้ความสำคัญกับทุกรายละเอียด ตั้งแต่การพัฒนาแนวคิด การประสานงานระหว่างประเทศ การเดินทางและสถานที่ ไปจนถึงการออกแบบประสบการณ์และการดำเนินงาน เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างมืออาชีพและสร้างคุณค่าให้กับศิลปิน พาร์ตเนอร์ และแฟน ๆ</p>
+        <p>เราไม่ได้มองบทบาทของ UTO EVENT เพียงในฐานะผู้จัดอีเวนต์ แต่ในฐานะพาร์ตเนอร์ที่สร้างโอกาสใหม่ ๆ ให้กับศิลปินญี่ปุ่นในระดับนานาชาติ พร้อมสร้างประสบการณ์ที่มีเอกลักษณ์และน่าจดจำให้กับแฟน ๆ</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVENT -->
-<section class="sec sec-alt" id="event">
-  <div class="container">
-    <div class="kicker">Event</div>
-    <h2>อีเวนต์ที่ร่วมแสดง</h2>
-    <div class="ev-grid one">
-      <a class="ev" href="https://utoevent.com/" target="_blank" rel="noopener">
-        <div class="img" style="background-image:url('assets/img/kamiki-rei-card.webp')"><span class="chip-pink">งานที่กำลังจะมาถึง</span></div>
-        <div class="body">
-          <h3>REI KAMIKI 1st Fan Meeting in Bangkok</h3>
-          <span class="jp">神木麗</span>
-          <div class="meta"><span>10 - 11 ตุลาคม 2026</span><span>Avani Sukhumvit Bangkok · Cherchan Studio</span></div>
-          <span class="go">ดูรายละเอียดงาน</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- MEDIA -->
-<section class="sec" id="media">
-  <div class="container">
-    <div class="kicker">MEDIA</div>
-    <h2>บทสัมภาษณ์และวิดีโอ</h2>
-    <p class="lead">รวมบทความและวิดีโอสัมภาษณ์ของ Rei Kamiki</p>
-    <div class="media-grid">
-      <a class="mtile" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>บทสัมภาษณ์</span></a>
-      <a class="mtile" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>วิดีโอสัมภาษณ์</span></a>
+      <div class="about-slider" id="aboutSlider">
+        <img class="on" src="assets/img/karen-about-2026.webp" alt="Karen Kaede">
+        <img src="assets/img/kamiki-rei-face.webp" alt="Rei Kamiki">
+        <img src="assets/img/minamo-face.webp" alt="MINAMO">
+        <img src="assets/img/seto-kanna-face.webp" alt="Kanna Seto">
+        <div class="adots" id="aboutDots"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -221,6 +153,25 @@ burger.addEventListener('click', ()=> setMenu(!mobileMenu.classList.contains('op
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> setMenu(false)));
 document.addEventListener('click', e=>{ if(mobileMenu.classList.contains('open') && !nav.contains(e.target)) setMenu(false); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') setMenu(false); });
+// about image slider
+const aImgs=[...document.querySelectorAll('#aboutSlider img')];
+const aDotsBox=document.getElementById('aboutDots');
+let aCur=0, aTimer=null;
+aImgs.forEach((_,i)=>{
+  const d=document.createElement('button');
+  d.className='adot'+(i===0?' on':'');
+  d.setAttribute('aria-label','ภาพ '+(i+1));
+  d.addEventListener('click',()=>{aGo(i);aRestart();});
+  aDotsBox.appendChild(d);
+});
+const aDots=[...aDotsBox.children];
+function aGo(i){
+  aImgs[aCur].classList.remove('on'); aDots[aCur].classList.remove('on');
+  aCur=(i+aImgs.length)%aImgs.length;
+  aImgs[aCur].classList.add('on'); aDots[aCur].classList.add('on');
+}
+function aRestart(){clearInterval(aTimer); aTimer=setInterval(()=>aGo(aCur+1),4500);}
+aRestart();
 // links with href # do not navigate
 document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click', e=>e.preventDefault()));
 </script>
