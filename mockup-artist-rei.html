@@ -3,18 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rei Kamiki - UTO Event Mockup หน้าดารา</title>
+<title>Rei Kamiki | UTO EVENT</title>
 <style>
 :root{--pink:#EE4C9B;--pink-dark:#BA3B79;--ink:#0d0d0f;--bg:#fff;--bg2:#f7f7f8;--line:#e8e8ea;--gray:#6b7280;--gray2:#9ca3af}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 .container{max-width:1180px;margin:0 auto;padding:0 22px}
-
-/* mockup banner */
-.mockup-note{background:var(--ink);color:#fff;font-size:.8rem;text-align:center;padding:7px 16px;letter-spacing:.04em}
-.mockup-note b{color:var(--pink)}
-.btn-soon{opacity:.55;cursor:default}
 
 /* nav */
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:18px;padding:12px 22px;background:#fff;border-bottom:1px solid rgba(13,13,15,.08)}
@@ -81,7 +76,8 @@ body{font-family:'Noto Sans Thai','IBM Plex Sans Thai',-apple-system,'Segoe UI',
 
 /* media */
 .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-.mtile{aspect-ratio:16/9;border-radius:14px;background:var(--bg2);border:1px dashed var(--gray2);display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--gray2);font-weight:700;font-size:.92rem;text-align:center;padding:16px}
+.mtile{aspect-ratio:16/9;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--ink);font-weight:700;font-size:.92rem;text-align:center;padding:16px;text-decoration:none;transition:border-color .2s}
+.mtile:hover{border-color:var(--pink)}
 .mtile svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6}
 
 /* footer SNS + contact */
@@ -114,8 +110,6 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
 </style>
 </head>
 <body>
-
-<div class="mockup-note">MOCKUP ประกอบการพิจารณา · ตัวอย่าง<b>หน้าดาราแต่ละคน</b> (Rei Kamiki) · ข้อมูลพื้นฐานจาก Actress Profile sheet ของลูกค้า · หมวด <b>MEDIA</b> เป็นชื่อชั่วคราว ยังเสนอชื่ออื่นได้ · ช่องทาง SNS รอข้อมูลจากลูกค้า</div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -186,10 +180,10 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding
   <div class="container">
     <div class="kicker">MEDIA</div>
     <h2>บทสัมภาษณ์และวิดีโอ</h2>
-    <p class="lead">รวมบทความและวิดีโอสัมภาษณ์ กดเพื่อเปิดเนื้อหาจากแหล่งภายนอก (ชื่อหมวด MEDIA เป็นชื่อชั่วคราว เตรียมข้อมูลจริงโดยลูกค้า)</p>
+    <p class="lead">รวมบทความและวิดีโอสัมภาษณ์ของ Rei Kamiki</p>
     <div class="media-grid">
-      <div class="mtile"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>บทสัมภาษณ์ (รอข้อมูล)</span></div>
-      <div class="mtile"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>วิดีโอสัมภาษณ์ (รอข้อมูล)</span></div>
+      <a class="mtile" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>บทสัมภาษณ์</span></a>
+      <a class="mtile" href="#"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg><span>วิดีโอสัมภาษณ์</span></a>
     </div>
   </div>
 </section>
@@ -227,7 +221,7 @@ burger.addEventListener('click', ()=> setMenu(!mobileMenu.classList.contains('op
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> setMenu(false)));
 document.addEventListener('click', e=>{ if(mobileMenu.classList.contains('open') && !nav.contains(e.target)) setMenu(false); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') setMenu(false); });
-// placeholder links (mockup) do not jump to top
+// links with href # do not navigate
 document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click', e=>e.preventDefault()));
 </script>
 </body>
